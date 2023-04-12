@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+
+<body>
+  <script src="script.js" defer></script>
+
+  <main class="wrapper">
+    <section class="calculator">
+
+      <div class="title-theme">
+        <h1 class="title">calc</h1>
+
+        <div class="rightSide">
+          <span>THEME</span>
+          <div class="theme-switcher">
+            <!-- Tipps I guess: https://webcodespace.com/how-to-create-a-three-state-toggle-switch-using-html-css-and-javascript/ -->
+            <label for="one">1</label>
+            <label for="two">2</label>
+            <label for="three">3</label>
+            <div class="toggle">
+              <input type="radio" class="toggles" name="color-mode" id="one" class="switch">
+              <input type="radio" class="toggles" name="color-mode" id="two" class="switch">
+              <input type="radio" class="toggles" name="color-mode" id="three" class="switch">
+            </div>
+          </div>
+
+        </div>
+        <!-- html web storage -->
+      </div>
+
+
+      <div class="display">
+        <output></output>
+      </div>
+
+
+      <div class="numpad" id="test">
+        <button class="button">7</button>
+        <button class="button">8</button>
+        <button class="button">9</button>
+        <button class="button backup del">DEL</button>
+
+        <button class="button">4</button>
+        <button class="button">5</button>
+        <button class="button">6</button>
+        <button class="button operator">+</button>
+
+        <button class="button">1</button>
+        <button class="button">2</button>
+        <button class="button">3</button>
+        <button class="button operator">-</button>
+
+        <button class="button">.</button>
+        <button class="button">0</button>
+        <button class="button operator">/</button>
+        <button class="button operator">x</button>
+
+        <button class="button long-boi backup reset">RESET</button>
+        <button class="button long-boi equals">=</button>
+      </div>
+    </section>
+  </main>
+
+
+
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+
+</html>
