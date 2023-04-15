@@ -75,8 +75,15 @@
 }
 
 .calculator{
+<<<<<<< HEAD
   width: 86.5%;
   height: 90%;
+=======
+  width: 80% ; /*22.5rem;
+  overflow: hidden; */
+  height: 80%;
+  padding: 1rem;
+>>>>>>> b062accf08d5cd014ce9143b6a8703ad6708d526
   font-family: 'League Spartan', sans-serif;
   background: green;
 
