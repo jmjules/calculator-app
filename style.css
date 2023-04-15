@@ -74,8 +74,8 @@
 }
 
 .calculator{
-  width: 80% ; /*22.5rem;*/
-  overflow: hidden;
+  width: 80% ; /*22.5rem;
+  overflow: hidden; */
   height: 80%;
   padding: 1rem;
   font-family: 'League Spartan', sans-serif;
