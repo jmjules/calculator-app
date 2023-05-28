@@ -218,6 +218,7 @@
   
 }
 .button{
+  width: 100%;
   cursor: pointer;
   color: var(--clr-font-secondary);
   background: var(--clr-key-primary);
