@@ -1,14 +1,5 @@
 :root{
-  --clr-darkmode-font-primary: hsl(0, 0%, 100%);
-  --clr-darkmode-font-secondary: hsl(221, 14%, 31%);
 
-  --clr-darkmode-bg-main: hsl(222, 26%, 31%);
-  --clr-darkmode-bg-keypad: hsl(223, 31%, 20%);
-  --clr-darkmode-bg-display: hsl(224, 36%, 15%);
-
-  --clr-darkmode-key-primary: hsl(30, 25%, 89%);
-  --clr-darkmode-key-del:hsl(225, 21%, 49%);
-  --clr-darkmode-key-eq: hsl(6, 63%, 50%);
 
   --fs-buttons-700: 2rem;
 }
@@ -62,13 +53,69 @@
     overflow-wrap: break-word;
   }
 
+.theme-dark{
+  --clr-font-primary: hsl(0, 0%, 100%);
+  --clr-font-primary-upper: var(--clr-font-primary);
+  --clr-font-secondary: hsl(221, 14%, 31%);
 
+  --clr-bg-main: hsl(222, 26%, 31%);
+  --clr-bg-keypad: hsl(223, 31%, 20%);
+  --clr-bg-display: hsl(224, 36%, 15%);
 
+  --clr-key-primary: hsl(30, 25%, 89%);
+  --clr-key-primary-highlight: hsl(0, 0%, 100%);
+  --clr-key-primary-shadow: hsl(224, 28%, 35%);
+  --clr-key-del:hsl(225, 21%, 49%);
+  --clr-key-del-highlight:hsl(222, 48%, 73%);
+  --clr-key-del-shadow: hsl(224, 28%, 35%);
+  --clr-key-eq: hsl(6, 63%, 50%);
+  --clr-key-eq-highlight: hsl(6, 93%, 67%);
+  --clr-key-eq-shadow: hsl(6, 70%, 34%);
+}
+.theme-light{
+  --clr-font-primary: hsl(0, 0%, 100%);
+  --clr-font-primary-upper: var(--clr-font-secondary);
+  --clr-font-secondary: hsl(60, 10%, 19%);
+
+  --clr-bg-main: hsl(0, 0%, 90%);
+  --clr-bg-keypad: hsl(0, 5%, 81%);
+  --clr-bg-display: hsl(0, 0%, 93%);
+
+  --clr-key-del:hsl(185, 42%, 37%);
+  --clr-key-del-highlight:hsl(185, 40%, 52%);
+  --clr-key-del-shadow:hsl(185, 58%, 25%);
+  --clr-key-eq: hsl(25, 98%, 40%);
+  --clr-key-eq-highlight: hsl(22, 100%, 61%);
+  --clr-key-eq-shadow: hsl(25, 99%, 27%);
+  --clr-key-primary: hsl(45, 7%, 89%);
+  --clr-key-primary-highlight: hsl(0, 0%, 100%);
+  --clr-key-primary-shadow: hsl(35, 11%, 61%);
+}
+.theme-contrast{
+  --clr-font-primary: hsl(0, 0%, 100%);
+  --clr-font-primary-upper: var(--clr-font-secondary);
+  --clr-font-special-eq : hsl(198, 20%, 13%);
+  --clr-font-secondary: hsl(52, 100%, 62%);
+
+  --clr-bg-main: hsl(268, 75%, 9%);
+  --clr-bg-keypad: hsl(268, 71%, 12%);
+  --clr-bg-display: var(--clr-bg-keypad);
+
+  --clr-key-del:hsl(281, 89%, 26%);
+  --clr-key-del-highlight:hsl(279, 51%, 42%);
+  --clr-key-del-shadow:hsl(285, 91%, 52%);
+  --clr-key-eq: hsl(176, 100%, 44%);
+  --clr-key-eq-highlight: hsl(177, 98%, 75%);
+  --clr-key-eq-shadow: hsl(177, 92%, 70%);
+  --clr-key-primary: hsl(268, 47%, 21%);
+  --clr-key-primary-highlight: hsl(264, 50%, 42%);
+  --clr-key-primary-shadow: hsl(290, 70%, 36%);
+}
 
 .wrapper{
   height: 100%;
   width: 100%;
-  background: var(--clr-darkmode-bg-main);
+  background: var(--clr-bg-main);
 
   display: grid;
   align-items: center;
@@ -88,9 +135,7 @@
 
 
 .title-theme{
-  /* width: 100%; */
-  /* background: red; */
-  color: var(--clr-darkmode-font-primary);
+  color: var(--clr-font-primary-upper);
   padding: 0 1rem;
   
   display: flex;
@@ -122,7 +167,7 @@
 .toggle{
   display: flex;
   justify-content: space-between;
-  background: var(--clr-darkmode-bg-keypad);
+  background: var(--clr-bg-keypad);
   padding: .3rem;
   border-radius: 100vw;
   width: 4.5rem;
@@ -131,12 +176,13 @@
   height: 1rem;
   width: 1rem;
   appearance: none;
-  background-color: var(--clr-darkmode-key-eq);
+  background-color: var(--clr-key-eq);
   border-radius: 50%;
   opacity: 0;
 }
 .toggle>input:hover{
   cursor: pointer;
+  background: var(--clr-key-eq-highlight);
 }
 #one{
   opacity: 1;
@@ -147,10 +193,10 @@
 
 
 .display{
-  color: var(--clr-darkmode-font-primary);
+  color: var(--clr-font-primary-upper);
   font-size: 2.5rem;
   line-height: 1;
-  background: var(--clr-darkmode-bg-display);
+  background: var(--clr-bg-display);
   border-radius: .5rem;
   height: 5.5rem;
   padding: 1.5rem;
@@ -162,7 +208,7 @@
 
 .numpad{
   height: 26.25rem;
-  background: var(--clr-darkmode-bg-keypad);
+  background: var(--clr-bg-keypad);
   border-radius: .625rem;
   padding: 1.5rem;
 
@@ -173,23 +219,35 @@
 }
 .button{
   cursor: pointer;
-  color: var(--clr-darkmode-font-secondary);
-  background: var(--clr-darkmode-key-primary);
+  color: var(--clr-font-secondary);
+  background: var(--clr-key-primary);
   font-size: var(--fs-buttons-700);
+  box-shadow: 0 4px var(--clr-key-primary-shadow);
   border-radius: .5rem;
-  box-shadow: 0 4px green;
+  
 }
 .button:hover{
-  background: white;
+  background: var(--clr-key-primary-highlight);
 }
 .backup{
-  color: var(--clr-darkmode-font-primary);
-  background: var(--clr-darkmode-key-del);
   font-size: 1.5rem;
+  color: var(--clr-font-primary);
+  background: var(--clr-key-del);
+  box-shadow: 0 4px var(--clr-key-del-shadow);
+}
+.backup:hover{
+  background: var(--clr-key-del-highlight);
 }
 .equals{
-  color: var(--clr-darkmode-font-primary);
-  background: var(--clr-darkmode-key-eq);
+  color: var(--clr-font-primary);
+  background: var(--clr-key-eq);
+  box-shadow: 0 4px var(--clr-key-eq-shadow);
+}
+.equals:hover{
+  background: var(--clr-key-eq-highlight);
+}
+.wrapper.theme-contrast .equals{
+  color: var(--clr-font-special-eq);
 }
 .long-boi{
   grid-column: span 2;
