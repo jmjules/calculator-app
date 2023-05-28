@@ -132,6 +132,11 @@
   flex-direction: column;
   gap: 1rem;
 }
+@media (width <= 600) {
+  .calculator{
+    width: 85%;
+  }
+}
 
 
 .title-theme{
