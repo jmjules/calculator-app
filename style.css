@@ -123,6 +123,7 @@
 }
 
 .calculator{
+  width: 86.5%;
   width: min(86.5%, 25rem);
   height: 90%;
   font-family: 'League Spartan', sans-serif;
