@@ -123,7 +123,6 @@
 }
 
 .calculator{
-  width: 86.5%;
   width: min(86.5%, 25rem);
   height: 90%;
   font-family: 'League Spartan', sans-serif;
@@ -132,11 +131,6 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-@media (width <= 600) {
-  .calculator{
-    width: 85%;
-  }
 }
 
 
@@ -218,11 +212,18 @@
   border-radius: .625rem;
   padding: 1.5rem;
 
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  
+  display: flex;
+  flex-wrap: wrap;
 }
+
+.numpad > *{
+  flex: 1 1 25%;
+}
+.button-helper{
+  padding: .5rem;
+  display: flex;
+}
+
 .button{
   width: 100%;
   cursor: pointer;
